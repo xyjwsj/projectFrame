@@ -16,6 +16,8 @@
 		6B1147461CA3841800238D93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B11473C1CA3841800238D93 /* Main.storyboard */; };
 		6B1147471CA3841800238D93 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B11473E1CA3841800238D93 /* Info.plist */; };
 		6B11474A1CA3B48900238D93 /* NSString+Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1147491CA3B48900238D93 /* NSString+Encrypt.m */; };
+		6BF686441CA3C56100CB2B27 /* UIFramePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF686431CA3C56100CB2B27 /* UIFramePickerViewController.m */; };
+		6BF6864D1CA3C67500CB2B27 /* NSString+UIExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF6864C1CA3C67500CB2B27 /* NSString+UIExtend.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,10 @@
 		6B1147491CA3B48900238D93 /* NSString+Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encrypt.m"; sourceTree = "<group>"; };
 		6B11474D1CA3B65D00238D93 /* AppMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppMacro.h; sourceTree = "<group>"; };
 		6B11474E1CA3B67600238D93 /* VendorMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VendorMacro.h; sourceTree = "<group>"; };
+		6BF686421CA3C56100CB2B27 /* UIFramePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFramePickerViewController.h; sourceTree = "<group>"; };
+		6BF686431CA3C56100CB2B27 /* UIFramePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIFramePickerViewController.m; sourceTree = "<group>"; };
+		6BF6864B1CA3C67500CB2B27 /* NSString+UIExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UIExtend.h"; sourceTree = "<group>"; };
+		6BF6864C1CA3C67500CB2B27 /* NSString+UIExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UIExtend.m"; sourceTree = "<group>"; };
 		7EF979560544D0BEC791577D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -101,6 +107,8 @@
 			children = (
 				6B1147481CA3B48900238D93 /* NSString+Encrypt.h */,
 				6B1147491CA3B48900238D93 /* NSString+Encrypt.m */,
+				6BF6864B1CA3C67500CB2B27 /* NSString+UIExtend.h */,
+				6BF6864C1CA3C67500CB2B27 /* NSString+UIExtend.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -108,6 +116,8 @@
 		6B1147271CA3841800238D93 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				6BF686421CA3C56100CB2B27 /* UIFramePickerViewController.h */,
+				6BF686431CA3C56100CB2B27 /* UIFramePickerViewController.m */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -389,9 +399,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B1147431CA3841800238D93 /* ViewController.m in Sources */,
+				6BF6864D1CA3C67500CB2B27 /* NSString+UIExtend.m in Sources */,
 				6B11474A1CA3B48900238D93 /* NSString+Encrypt.m in Sources */,
 				6B1147421CA3841800238D93 /* main.m in Sources */,
 				6B1147411CA3841800238D93 /* AppDelegate.m in Sources */,
+				6BF686441CA3C56100CB2B27 /* UIFramePickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
