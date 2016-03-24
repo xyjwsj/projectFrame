@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6A8F2F72936A2CC4FCAE669A'
-               BlueprintName = 'MBProgressHUD'
+               BlueprintIdentifier = '6DBCAD7C2A69DF2AFE5CE38F'
+               BlueprintName = 'JSONKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libMBProgressHUD.a'>
+               BuildableName = 'libJSONKit.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
