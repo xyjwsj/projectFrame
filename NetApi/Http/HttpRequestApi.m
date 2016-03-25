@@ -76,4 +76,40 @@
     return YES;
 }
 
+- (void)httpUploadWithUrl:(NSString *)url uploadData:(NSData *)uploadData callback:(NetworkGeneralCallbackBlock)callback {
+    NSURL *URL = [NSURL URLWithString:url];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionUploadTask *uploadTask = [session uploadTaskWithRequest:request
+                                                               fromData:uploadData
+                                                      completionHandler:
+                                          ^(NSData *data, NSURLResponse *response, NSError *error) {
+                                              //
+                                          }];
+    
+    [uploadTask resume];
+}
+
+- (void)httpUploadWithUrl:(NSString *)url uploadUrl:(NSString *)uploadUrl callback:(NetworkGeneralCallbackBlock)callback {
+   
+}
+
+- (void)download {
+    NSURL *URL = [NSURL URLWithString:@"http://example.com/file.zip"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithRequest:request
+                                                            completionHandler:
+                                              ^(NSURL *location, NSURLResponse *response, NSError *error) {
+                                                  NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+                                                  NSURL *documentsDirectoryURL = [NSURL fileURLWithPath:documentsPath];
+                                                  NSURL *newFileLocation = [documentsDirectoryURL URLByAppendingPathComponent:[[response URL] lastPathComponent]];
+                                                  [[NSFileManager defaultManager] copyItemAtURL:location toURL:newFileLocation error:nil];
+                                              }];
+    
+    [downloadTask resume];
+}
+
 @end

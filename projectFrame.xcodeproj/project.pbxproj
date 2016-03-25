@@ -49,7 +49,6 @@
 		6B5DF3241CA50A5500B29EDF /* NetRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetRequestModel.m; sourceTree = "<group>"; };
 		6B5DF3261CA5112600B29EDF /* NetResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetResponseModel.h; sourceTree = "<group>"; };
 		6B5DF3271CA5112600B29EDF /* NetResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetResponseModel.m; sourceTree = "<group>"; };
-		6B5DF32B1CA5441100B29EDF /* NetworkDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkDelegate.h; sourceTree = "<group>"; };
 		6B5DF32C1CA5441100B29EDF /* NetworkDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkDelegate.m; sourceTree = "<group>"; };
 		6BF686421CA3C56100CB2B27 /* UIFramePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFramePickerViewController.h; sourceTree = "<group>"; };
 		6BF686431CA3C56100CB2B27 /* UIFramePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIFramePickerViewController.m; sourceTree = "<group>"; };
@@ -270,7 +269,6 @@
 				6B5DF3191CA4DA0600B29EDF /* Http */,
 				6B5DF31A1CA4DA0600B29EDF /* Socket */,
 				6B5DF31F1CA4FC6400B29EDF /* NetworkCallback.h */,
-				6B5DF32B1CA5441100B29EDF /* NetworkDelegate.h */,
 				6B5DF32C1CA5441100B29EDF /* NetworkDelegate.m */,
 			);
 			path = NetApi;

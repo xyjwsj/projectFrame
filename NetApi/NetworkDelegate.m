@@ -6,7 +6,7 @@
 //  Copyright © 2016年 wsj_proj. All rights reserved.
 //
 
-#import "NetworkDelegate.h"
+#import "NetworkCallback.h"
 
 @implementation NetworkDelegate {
     NetworkCallbackBlock _Nullable _successCallback;
