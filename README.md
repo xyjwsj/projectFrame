@@ -20,9 +20,14 @@
     - DLL 数据访问层
     - Util 工具类
 
-  - HttpApi目录
+  - NetApi目录
 
-    > 主要时Http网络层开发－－作为单独模块主要是可以进行Http层移植问题
+    > 主要时网络层开发－－作为单独模块主要是可以进行网络层移植问题
+    
+    - Ftp Ftp网络访问层
+    - Http Http网络访问层（包含https）
+    - Socket Socket网络连接，长链接常用
+
 
   - Models目录为数据模型层
     - BusinessDB 业务层模型
