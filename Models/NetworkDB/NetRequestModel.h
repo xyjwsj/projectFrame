@@ -17,8 +17,9 @@
 
 /**
  *  REQUEST METHOD
+ *  YOU CAN SET DATA OF TYPE WHEN YOU HAVE THIS INSTANCE
  */
-@property (nonatomic, readonly, assign) NET_REQUEST_METHOD _method;
+@property (nonatomic, readwrite, assign) NET_REQUEST_METHOD _method;
 
 /**
  *  REQUEST HEADER
@@ -37,15 +38,21 @@
 
 
 /**
+ *  REQUEST EXPECT RETURN DATA TYPE
+ *  YOU CAN SET DATA OF TYPE WHEN YOU HAVE THIS INSTANCE
+ */
+@property (nonatomic, readwrite, assign) NET_RESPONSE_DATA_TYPE _returnDataType;
+
+
+/**
  *  INITALIZE REQUEST DATA
  *
  *  @param url    REQUEST URL
- *  @param method REQUEST METHOD
  *  @param header REQUEST HEADER INFO
  *  @param params REQUEST PARAMS INFO
  *
  *  @return REQUEST DATA OBJECT
  */
-- (nonnull instancetype)initWithUrl:(NSString* _Nonnull)url method:(NET_REQUEST_METHOD)method header:(NSDictionary<NSString*, NSString*>* _Nullable)header params:(NSDictionary<NSString*, NSString*>* _Nullable)params;
+- (nonnull instancetype)initWithUrl:(NSString* _Nonnull)url header:(NSDictionary<NSString*, NSString*>* _Nullable)header params:(NSDictionary<NSString*, NSString*>* _Nullable)params;
 
 @end

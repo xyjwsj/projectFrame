@@ -47,7 +47,8 @@ typedef enum _NET_RESPONSE_DATA_TYPE {
     STRING,
     NSDATA,
     NSDICTIONARY,
-    NSARRAY
+    NSARRAY,
+    NOSET
 }NET_RESPONSE_DATA_TYPE;
 
 #endif /* NetMacro_h */

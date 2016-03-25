@@ -6,8 +6,13 @@
 //  Copyright © 2016年 wsj_proj. All rights reserved.
 //
 
+#ifndef NetworkCallback_h
+#define NetworkCallback_h
+
 #import <Foundation/Foundation.h>
 #import "NetMacro.h"
+#import "NetResponseModel.h"
+
 
 @protocol NetworkCallback <NSObject>
 
@@ -17,9 +22,8 @@
  *  CALLBACK METHOD
  *
  *  @param data CALLBAKC DATA
- *  @param type DATA TYPE
  */
-- (void)netSuccessData:(id)data type:(NET_RESPONSE_DATA_TYPE)type;
+- (void)netSuccessData:(NetResponseModel* _Nonnull)data;
 
 
 /**
@@ -27,18 +31,9 @@
  *  CALLBACK METHOD
  *
  *  @param data SERVER RETURN DATA
- *  @param code ERROR CODE
- *  @param type SERVER RETURN DATA TYPE
  */
-- (void)netFailData:(id)data errorCode:(NET_STATUS_CODE)code type:(NET_RESPONSE_DATA_TYPE)type;
-
-
-/**
- *  NET REQUEST TIMEOUT
- *  CALLBACK METHOD
- *
- *  @param reseson TIMEOUT REASON
- */
-- (void)netTimeOut:(NSString*)reason;
+- (void)netFailData:(NetResponseModel* _Nonnull)data;
 
 @end
+
+#endif

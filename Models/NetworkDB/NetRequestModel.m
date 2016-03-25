@@ -14,15 +14,17 @@
 _method,
 _headers,
 _params,
-_timeout;
+_timeout,
+_returnDataType;
 
--(instancetype)initWithUrl:(NSString *)url method:(NET_REQUEST_METHOD)method header:(NSDictionary<NSString *,NSString *> *)header params:(NSDictionary<NSString *,NSString *> *)params {
+-(instancetype)initWithUrl:(NSString *)url header:(NSDictionary<NSString *,NSString *> *)header params:(NSDictionary<NSString *,NSString *> *)params {
     if (self = [super init]) {
         _requestUrl = url;
-        _method = method;
+        _method = GET;
         _headers = header;
         _params = params;
         _timeout = 10;
+        _returnDataType = NOSET;
     }
     return self;
 }
