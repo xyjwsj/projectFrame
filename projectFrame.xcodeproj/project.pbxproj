@@ -62,7 +62,7 @@
 				6B1147201CA3841800238D93 /* AppDelegate */,
 				6B1147251CA3841800238D93 /* General */,
 				6B1147291CA3841800238D93 /* Helpers */,
-				6B11472D1CA3841800238D93 /* HttpApi */,
+				6B5DF3171CA4D9D200B29EDF /* NetApi */,
 				6B11472E1CA3841800238D93 /* Models */,
 				6B1147341CA3841800238D93 /* Module */,
 				6B1147381CA3841800238D93 /* Resources */,
@@ -132,19 +132,11 @@
 		6B1147291CA3841800238D93 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				6B11472A1CA3841800238D93 /* BAL */,
+				6B5DF31B1CA4DA3B00B29EDF /* BAL */,
 				6B11472B1CA3841800238D93 /* DLL */,
 				6B11472C1CA3841800238D93 /* Util */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		6B11472A1CA3841800238D93 /* BAL */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = BAL;
-			path = DAL;
 			sourceTree = "<group>";
 		};
 		6B11472B1CA3841800238D93 /* DLL */ = {
@@ -159,13 +151,6 @@
 			children = (
 			);
 			path = Util;
-			sourceTree = "<group>";
-		};
-		6B11472D1CA3841800238D93 /* HttpApi */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = HttpApi;
 			sourceTree = "<group>";
 		};
 		6B11472E1CA3841800238D93 /* Models */ = {
@@ -257,6 +242,44 @@
 			children = (
 			);
 			path = Vendors;
+			sourceTree = "<group>";
+		};
+		6B5DF3171CA4D9D200B29EDF /* NetApi */ = {
+			isa = PBXGroup;
+			children = (
+				6B5DF3181CA4DA0600B29EDF /* Ftp */,
+				6B5DF3191CA4DA0600B29EDF /* Http */,
+				6B5DF31A1CA4DA0600B29EDF /* Socket */,
+			);
+			path = NetApi;
+			sourceTree = "<group>";
+		};
+		6B5DF3181CA4DA0600B29EDF /* Ftp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ftp;
+			sourceTree = "<group>";
+		};
+		6B5DF3191CA4DA0600B29EDF /* Http */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		6B5DF31A1CA4DA0600B29EDF /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
+		6B5DF31B1CA4DA3B00B29EDF /* BAL */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BAL;
 			sourceTree = "<group>";
 		};
 		F2DF83F0456678970C701BAE /* Pods */ = {
