@@ -16,6 +16,9 @@
 		6B1147461CA3841800238D93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B11473C1CA3841800238D93 /* Main.storyboard */; };
 		6B1147471CA3841800238D93 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B11473E1CA3841800238D93 /* Info.plist */; };
 		6B11474A1CA3B48900238D93 /* NSString+Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1147491CA3B48900238D93 /* NSString+Encrypt.m */; };
+		6B5DF3221CA5081700B29EDF /* HttpRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DF3211CA5081700B29EDF /* HttpRequestApi.m */; };
+		6B5DF3251CA50A5500B29EDF /* NetRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DF3241CA50A5500B29EDF /* NetRequestModel.m */; };
+		6B5DF3281CA5112600B29EDF /* NetResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DF3271CA5112600B29EDF /* NetResponseModel.m */; };
 		6BF686441CA3C56100CB2B27 /* UIFramePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF686431CA3C56100CB2B27 /* UIFramePickerViewController.m */; };
 		6BF6864D1CA3C67500CB2B27 /* NSString+UIExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF6864C1CA3C67500CB2B27 /* NSString+UIExtend.m */; };
 /* End PBXBuildFile section */
@@ -37,6 +40,14 @@
 		6B1147491CA3B48900238D93 /* NSString+Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encrypt.m"; sourceTree = "<group>"; };
 		6B11474D1CA3B65D00238D93 /* AppMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppMacro.h; sourceTree = "<group>"; };
 		6B11474E1CA3B67600238D93 /* VendorMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VendorMacro.h; sourceTree = "<group>"; };
+		6B5DF31C1CA4E4D900B29EDF /* NetMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetMacro.h; sourceTree = "<group>"; };
+		6B5DF31F1CA4FC6400B29EDF /* NetworkCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCallback.h; sourceTree = "<group>"; };
+		6B5DF3201CA5081700B29EDF /* HttpRequestApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequestApi.h; sourceTree = "<group>"; };
+		6B5DF3211CA5081700B29EDF /* HttpRequestApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequestApi.m; sourceTree = "<group>"; };
+		6B5DF3231CA50A5500B29EDF /* NetRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetRequestModel.h; sourceTree = "<group>"; };
+		6B5DF3241CA50A5500B29EDF /* NetRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetRequestModel.m; sourceTree = "<group>"; };
+		6B5DF3261CA5112600B29EDF /* NetResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetResponseModel.h; sourceTree = "<group>"; };
+		6B5DF3271CA5112600B29EDF /* NetResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetResponseModel.m; sourceTree = "<group>"; };
 		6BF686421CA3C56100CB2B27 /* UIFramePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFramePickerViewController.h; sourceTree = "<group>"; };
 		6BF686431CA3C56100CB2B27 /* UIFramePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIFramePickerViewController.m; sourceTree = "<group>"; };
 		6BF6864B1CA3C67500CB2B27 /* NSString+UIExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UIExtend.h"; sourceTree = "<group>"; };
@@ -191,6 +202,7 @@
 			children = (
 				6B11474D1CA3B65D00238D93 /* AppMacro.h */,
 				6B11474E1CA3B67600238D93 /* VendorMacro.h */,
+				6B5DF31C1CA4E4D900B29EDF /* NetMacro.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -198,6 +210,10 @@
 		6B1147331CA3841800238D93 /* NetworkDB */ = {
 			isa = PBXGroup;
 			children = (
+				6B5DF3231CA50A5500B29EDF /* NetRequestModel.h */,
+				6B5DF3241CA50A5500B29EDF /* NetRequestModel.m */,
+				6B5DF3261CA5112600B29EDF /* NetResponseModel.h */,
+				6B5DF3271CA5112600B29EDF /* NetResponseModel.m */,
 			);
 			path = NetworkDB;
 			sourceTree = "<group>";
@@ -250,6 +266,7 @@
 				6B5DF3181CA4DA0600B29EDF /* Ftp */,
 				6B5DF3191CA4DA0600B29EDF /* Http */,
 				6B5DF31A1CA4DA0600B29EDF /* Socket */,
+				6B5DF31F1CA4FC6400B29EDF /* NetworkCallback.h */,
 			);
 			path = NetApi;
 			sourceTree = "<group>";
@@ -264,6 +281,8 @@
 		6B5DF3191CA4DA0600B29EDF /* Http */ = {
 			isa = PBXGroup;
 			children = (
+				6B5DF3201CA5081700B29EDF /* HttpRequestApi.h */,
+				6B5DF3211CA5081700B29EDF /* HttpRequestApi.m */,
 			);
 			path = Http;
 			sourceTree = "<group>";
@@ -421,10 +440,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B5DF3281CA5112600B29EDF /* NetResponseModel.m in Sources */,
 				6B1147431CA3841800238D93 /* ViewController.m in Sources */,
 				6BF6864D1CA3C67500CB2B27 /* NSString+UIExtend.m in Sources */,
 				6B11474A1CA3B48900238D93 /* NSString+Encrypt.m in Sources */,
 				6B1147421CA3841800238D93 /* main.m in Sources */,
+				6B5DF3221CA5081700B29EDF /* HttpRequestApi.m in Sources */,
+				6B5DF3251CA50A5500B29EDF /* NetRequestModel.m in Sources */,
 				6B1147411CA3841800238D93 /* AppDelegate.m in Sources */,
 				6BF686441CA3C56100CB2B27 /* UIFramePickerViewController.m in Sources */,
 			);
@@ -537,6 +559,13 @@
 			baseConfigurationReference = 1218BE5DABF1C1E03A769078 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/JSONKit\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/RMMapper\"",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.wsj.projectFrame;
@@ -549,6 +578,13 @@
 			baseConfigurationReference = 15BE9A2CEF84A96058EC09D3 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/JSONKit\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/RMMapper\"",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.wsj.projectFrame;
