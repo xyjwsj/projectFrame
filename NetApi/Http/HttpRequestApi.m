@@ -37,6 +37,7 @@ NSString* const UPLOAD_URL_KEY = @"project_frame_upload_url_key";
         [task resume];
     } else {
         NSLog(@"config http request fail");
+        
     }
 }
 

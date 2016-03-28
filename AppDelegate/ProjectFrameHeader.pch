@@ -1,0 +1,21 @@
+//
+//  ProjectFrameHeader.pch
+//  projectFrame
+//
+//  Created by Hoolai on 16/3/28.
+//  Copyright © 2016年 wsj_proj. All rights reserved.
+//
+
+#ifndef ProjectFrameHeader_pch
+#define ProjectFrameHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__ // 只被object－c文件所引用
+
+#import <Foundation/Foundation.h>
+#import "CocoaLumberjack.h"
+#endif
+
+#endif /* ProjectFrameHeader_pch */

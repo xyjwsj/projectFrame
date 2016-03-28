@@ -20,6 +20,9 @@
 		6B5DF3251CA50A5500B29EDF /* NetRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DF3241CA50A5500B29EDF /* NetRequestModel.m */; };
 		6B5DF3281CA5112600B29EDF /* NetResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DF3271CA5112600B29EDF /* NetResponseModel.m */; };
 		6B5DF32D1CA5441100B29EDF /* NetworkDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DF32C1CA5441100B29EDF /* NetworkDelegate.m */; };
+		6BCBF2A31CA9272E00EF13EE /* DLDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCBF2A21CA9272E00EF13EE /* DLDatabaseManager.m */; };
+		6BCBF2A51CA929B900EF13EE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCBF2A41CA929B900EF13EE /* libsqlite3.tbd */; };
+		6BCBF2F51CA92F5200EF13EE /* DDServerLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCBF2F41CA92F5200EF13EE /* DDServerLogger.m */; };
 		6BF686441CA3C56100CB2B27 /* UIFramePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF686431CA3C56100CB2B27 /* UIFramePickerViewController.m */; };
 		6BF6864D1CA3C67500CB2B27 /* NSString+UIExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF6864C1CA3C67500CB2B27 /* NSString+UIExtend.m */; };
 /* End PBXBuildFile section */
@@ -50,6 +53,12 @@
 		6B5DF3261CA5112600B29EDF /* NetResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetResponseModel.h; sourceTree = "<group>"; };
 		6B5DF3271CA5112600B29EDF /* NetResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetResponseModel.m; sourceTree = "<group>"; };
 		6B5DF32C1CA5441100B29EDF /* NetworkDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkDelegate.m; sourceTree = "<group>"; };
+		6BCBF2A11CA9272E00EF13EE /* DLDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLDatabaseManager.h; sourceTree = "<group>"; };
+		6BCBF2A21CA9272E00EF13EE /* DLDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLDatabaseManager.m; sourceTree = "<group>"; };
+		6BCBF2A41CA929B900EF13EE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		6BCBF2F11CA92C1E00EF13EE /* ProjectFrameHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectFrameHeader.pch; sourceTree = "<group>"; };
+		6BCBF2F31CA92F5200EF13EE /* DDServerLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDServerLogger.h; sourceTree = "<group>"; };
+		6BCBF2F41CA92F5200EF13EE /* DDServerLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDServerLogger.m; sourceTree = "<group>"; };
 		6BF686421CA3C56100CB2B27 /* UIFramePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFramePickerViewController.h; sourceTree = "<group>"; };
 		6BF686431CA3C56100CB2B27 /* UIFramePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIFramePickerViewController.m; sourceTree = "<group>"; };
 		6BF6864B1CA3C67500CB2B27 /* NSString+UIExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UIExtend.h"; sourceTree = "<group>"; };
@@ -62,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BCBF2A51CA929B900EF13EE /* libsqlite3.tbd in Frameworks */,
 				47B6CB80E146ECC44A480568 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +111,7 @@
 				6B1147211CA3841800238D93 /* AppDelegate.h */,
 				6B1147221CA3841800238D93 /* AppDelegate.m */,
 				6B1147231CA3841800238D93 /* main.m */,
+				6BCBF2F11CA92C1E00EF13EE /* ProjectFrameHeader.pch */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -155,6 +166,8 @@
 		6B11472B1CA3841800238D93 /* DLL */ = {
 			isa = PBXGroup;
 			children = (
+				6BCBF2A11CA9272E00EF13EE /* DLDatabaseManager.h */,
+				6BCBF2A21CA9272E00EF13EE /* DLDatabaseManager.m */,
 			);
 			path = DLL;
 			sourceTree = "<group>";
@@ -258,6 +271,7 @@
 		6B1147401CA3841800238D93 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				6BCBF2F21CA92F5200EF13EE /* CocoaLumberjack */,
 			);
 			path = Vendors;
 			sourceTree = "<group>";
@@ -304,6 +318,15 @@
 			path = BAL;
 			sourceTree = "<group>";
 		};
+		6BCBF2F21CA92F5200EF13EE /* CocoaLumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				6BCBF2F31CA92F5200EF13EE /* DDServerLogger.h */,
+				6BCBF2F41CA92F5200EF13EE /* DDServerLogger.m */,
+			);
+			path = CocoaLumberjack;
+			sourceTree = "<group>";
+		};
 		F2DF83F0456678970C701BAE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +339,7 @@
 		FD35261BAC3BC0C445C32C20 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6BCBF2A41CA929B900EF13EE /* libsqlite3.tbd */,
 				7EF979560544D0BEC791577D /* libPods.a */,
 			);
 			name = Frameworks;
@@ -446,8 +470,10 @@
 				6B5DF3281CA5112600B29EDF /* NetResponseModel.m in Sources */,
 				6B1147431CA3841800238D93 /* ViewController.m in Sources */,
 				6BF6864D1CA3C67500CB2B27 /* NSString+UIExtend.m in Sources */,
+				6BCBF2A31CA9272E00EF13EE /* DLDatabaseManager.m in Sources */,
 				6B5DF32D1CA5441100B29EDF /* NetworkDelegate.m in Sources */,
 				6B11474A1CA3B48900238D93 /* NSString+Encrypt.m in Sources */,
+				6BCBF2F51CA92F5200EF13EE /* DDServerLogger.m in Sources */,
 				6B1147421CA3841800238D93 /* main.m in Sources */,
 				6B5DF3221CA5081700B29EDF /* HttpRequestApi.m in Sources */,
 				6B5DF3251CA50A5500B29EDF /* NetRequestModel.m in Sources */,
@@ -563,6 +589,8 @@
 			baseConfigurationReference = 1218BE5DABF1C1E03A769078 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/AppDelegate/ProjectFrameHeader.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -582,6 +610,8 @@
 			baseConfigurationReference = 15BE9A2CEF84A96058EC09D3 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/AppDelegate/ProjectFrameHeader.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",

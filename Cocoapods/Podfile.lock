@@ -1,14 +1,24 @@
 PODS:
+  - CocoaLumberjack (2.0.0):
+    - CocoaLumberjack/Default (= 2.0.0)
+    - CocoaLumberjack/Extensions (= 2.0.0)
+  - CocoaLumberjack/Core (2.0.0)
+  - CocoaLumberjack/Default (2.0.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.0.0):
+    - CocoaLumberjack/Default
   - JSONKit (1.5pre)
   - MBProgressHUD (0.9.1)
   - RMMapper (1.1.5)
 
 DEPENDENCIES:
+  - CocoaLumberjack (~> 2.0.0)
   - JSONKit (~> 1.5pre)
   - MBProgressHUD (~> 0.9.1)
   - RMMapper (~> 1.1.5)
 
 SPEC CHECKSUMS:
+  CocoaLumberjack: a6f77d987d65dc7ba86b0f84db7d0b9084f77bcb
   JSONKit: bae313ce6a6c444f40489a6c0b023f399888871f
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   RMMapper: 21122d753c736d975f6c61e674afce8db73579af
