@@ -8,6 +8,9 @@
 
 #import "HttpRequestApi.h"
 
+NSString* const UPLOAD_NSDATA_KEY = @"project_frame_upload_nsdata_key";
+NSString* const UPLOAD_URL_KEY = @"project_frame_upload_url_key";
+
 @implementation HttpRequestApi
 
 - (void)httpWithRequestModel:(NetRequestModel *)requestData callback:(id<NetworkCallback>)callback {
@@ -76,23 +79,40 @@
     return YES;
 }
 
-- (void)httpUploadWithUrl:(NSString *)url uploadData:(NSData *)uploadData callback:(NetworkGeneralCallbackBlock)callback {
-    NSURL *URL = [NSURL URLWithString:url];
+- (void)httpUploadWithUrl:(NetRequestModel *)requestData callback:(NetworkGeneralCallbackBlock)callback {
+    
+    NSArray* keys = [requestData._params allKeys];
+    if ([keys containsObject:UPLOAD_NSDATA_KEY] && [keys containsObject:UPLOAD_URL_KEY]) {
+        NSLog(@"can not containt also include keys");
+        return;
+    }
+    if (![keys containsObject:UPLOAD_NSDATA_KEY] && ![keys containsObject:UPLOAD_URL_KEY]) {
+        NSLog(@"can not containt also include keys");
+        return;
+    }
+    
+    NSURL *URL = [NSURL URLWithString:requestData._requestUrl];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
     NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionUploadTask *uploadTask = [session uploadTaskWithRequest:request
-                                                               fromData:uploadData
-                                                      completionHandler:
-                                          ^(NSData *data, NSURLResponse *response, NSError *error) {
-                                              //
-                                          }];
     
-    [uploadTask resume];
-}
-
-- (void)httpUploadWithUrl:(NSString *)url uploadUrl:(NSString *)uploadUrl callback:(NetworkGeneralCallbackBlock)callback {
-   
+    if ([keys containsObject:UPLOAD_NSDATA_KEY] && ![keys containsObject:UPLOAD_URL_KEY]) {
+        //nsdata 上传
+        NSURLSessionUploadTask *uploadTask = [session uploadTaskWithRequest:request
+                                                                   fromData:[requestData._params objectForKey:UPLOAD_NSDATA_KEY]
+                                                          completionHandler:
+                                              ^(NSData *data, NSURLResponse *response, NSError *error) {
+                                                  
+                                              }];
+        
+        [uploadTask resume];
+    }
+    if (![keys containsObject:UPLOAD_NSDATA_KEY] && [keys containsObject:UPLOAD_URL_KEY]) {
+        //url 上传
+        [session uploadTaskWithRequest:request fromFile:[NSURL URLWithString:[requestData._params objectForKey:UPLOAD_URL_KEY]] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            
+        }];
+    }
 }
 
 - (void)download {

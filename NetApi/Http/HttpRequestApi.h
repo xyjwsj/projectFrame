@@ -10,6 +10,9 @@
 #import "NetworkCallback.h"
 #import "NetRequestModel.h"
 
+FOUNDATION_EXPORT NSString* _Nonnull const UPLOAD_NSDATA_KEY;
+FOUNDATION_EXPORT NSString* _Nonnull const UPLOAD_URL_KEY;
+
 @interface HttpRequestApi : NSObject
 
 /**
@@ -31,21 +34,11 @@
 - (void)httpWithRequestModel:(NetRequestModel* _Nonnull)requestData successCallback:(NetworkCallbackBlock _Nullable)successData failCallback:(NetworkCallbackBlock _Nullable)failData;
 
 /**
- *  UPLOAD WITH NSDATA
+ *  COMMON UPLOAD WITH REQUEST DATA
  *
- *  @param url        UPLOAD SERVER URL
- *  @param uploadData UPLOAD DATA
- *  @param callback   UPLOAD RESULT
+ *  @param requestData REQUEST DATA, THIS DATA MUST CONTENT THE NSDATA KEY OR UPLOAD URL
+ *  @param callback    REQUEST CALLBACK
  */
-- (void)httpUploadWithUrl:(NSString* _Nonnull)url uploadData:(NSData* _Nonnull)uploadData callback:(NetworkGeneralCallbackBlock _Nullable)callback;
-
-/**
- *  UPLOAD WITH RELATIVE PATH
- *
- *  @param url       UPLOAD SERVER URL
- *  @param uploadUrl DATA OF RELATIVE PATH
- *  @param callback  UPLOAD RESULT
- */
-- (void)httpUploadWithUrl:(NSString* _Nonnull)url uploadUrl:(NSString* _Nonnull)uploadUrl callback:(NetworkGeneralCallbackBlock _Nullable)callback;
+- (void)httpUploadWithUrl:(NetRequestModel* _Nonnull)requestData callback:(NetworkGeneralCallbackBlock _Nullable)callback;
 
 @end
